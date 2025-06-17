@@ -9,8 +9,7 @@
 A full-stack URL shortener app with user login, JWT-based authentication, and dashboard view.
 
 ## 🌐 Live Demo
-- Frontend: [shortify-url-shortner.vercel.app](https://shortify-url-shortner.vercel.app)
-- Backend: [Render backend link](https://shortify-backend.onrender.com)
+- https://shortify-url-shortner-theta.vercel.app/
 
 ## 📁 Tech Stack
 - React.js
@@ -18,6 +17,4 @@ A full-stack URL shortener app with user login, JWT-based authentication, and da
 - MongoDB (Mongoose)
 - JWT for authentication
 
-## 🚀 Getting Started
 
-Clone the project:
