@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./startPage.css";
 import { useNavigate } from "react-router-dom";
+const baseUrl = process.env.REACT_APP_API_URL;
 
 
 function SignupForm() {
@@ -13,7 +14,7 @@ function SignupForm() {
 
     // console.log(username, password);
     try {
-      const res = await fetch("http://localhost:5000/user/signup", {
+      const res = await fetch(`${baseUrl}/user/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

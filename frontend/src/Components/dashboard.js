@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import './dashboard.css'; 
 import Urls from './urls.js';
 
+const baseUrl = process.env.REACT_APP_API_URL;
+
 export default function Dashboard() {
   const [redirectUrl, setUrl] = useState('');
   const [days, setDays] = useState('');
@@ -12,9 +14,9 @@ export default function Dashboard() {
 
     try {
 
-      const token = localStorage.getItem("token");
+    const token = localStorage.getItem("token");
      console.log(token);
-      const res = await fetch("http://localhost:5000/url/create", {
+      const res = await fetch(`${baseUrl}/url/create`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -30,7 +32,7 @@ export default function Dashboard() {
       // console.log("data:",data);
 
       if (res.ok) {
-        alert(`Shortened URL: http://localhost:5000/url/${data.shortId}`); 
+        alert(`Shortened URL: ${baseUrl}/url/${data.shortId}`); 
       } else{
         alert("Url cant be alive for more than 100 days");
       } 
@@ -47,7 +49,7 @@ export default function Dashboard() {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch('http://localhost:5000/user/dashboard', {
+      const res = await fetch(`${baseUrl}/user/dashboard`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`

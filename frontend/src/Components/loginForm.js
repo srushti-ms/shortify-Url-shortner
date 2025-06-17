@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./startPage.css";
 import { useNavigate } from "react-router-dom";
 // import Dashboard from "./dashboard";
+const baseUrl = process.env.REACT_APP_API_URL;
 
 function LoginForm() {
   const navigate = useNavigate();
@@ -11,9 +12,9 @@ function LoginForm() {
     const username = event.target.username.value;
     const password = event.target.password.value;
 
-    // console.log(username, password);
+    console.log({baseUrl});
     try {
-      const res = await fetch("http://localhost:5000/user/login", {
+      const res = await fetch(`${baseUrl}/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,4 +1,5 @@
 import "./urls.css";
+const baseUrl = process.env.REACT_APP_API_URL;
 
 export default function urls({urls}){
     return (
@@ -9,7 +10,8 @@ export default function urls({urls}){
       ) : (
         urls.map((url) => (
           <div key={url.shortId} className="url-card">
-            <p><strong>Short url:</strong> <a a href={`http://localhost:5000/url/${url.shortId}`} target="_blank" rel="noopener noreferrer">http://localhost:5000/url/{url.shortId}</a></p>
+           <p><strong>Short url:</strong>{" "}<a href={`${baseUrl}/url/${url.shortId}`}target="_blank"rel="noopener noreferrer">{`${baseUrl}/url/${url.shortId}`}</a>
+</p>
             <p>
               <strong>Original URL:</strong>{" "}
               <a href={url.redirectUrl} target="_blank" rel="noopener noreferrer">
