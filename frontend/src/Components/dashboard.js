@@ -30,7 +30,7 @@ export default function Dashboard() {
       // console.log("data:",data);
 
       if (res.ok) {
-        alert(`Shortened URL: http://localhost:5000/${data.shortId}`); // ✅ fixed
+        alert(`Shortened URL: http://localhost:5000/url/${data.shortId}`); 
       } else{
         alert("Url cant be alive for more than 100 days");
       } 
