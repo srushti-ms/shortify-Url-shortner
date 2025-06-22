@@ -10,8 +10,6 @@ A full-stack URL shortener web application that allows users to register and log
 
 Built with the MERN stack (MongoDB, Express.js, React.js, Node.js), the app offers a modern, responsive UI and secure backend for data management and user sessions.
 
-## 🌐 Live Demo
-https://shortify-url-shortner-theta.vercel.app/
 
 ## 📁 Tech Stack
 - React.js
